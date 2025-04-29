@@ -13,7 +13,7 @@
 	<p>Location: <a href="https://www.visualcrossing.com/weather-api">Coppell, TX</a></p>
 	<p>Unit Group: <a href="https://www.visualcrossing.com/weather-api">US</a></p>
 
-	VisualCrossingAPI = ${{ secrets.VISUALCROSSINGAPI }};
+
 
 	<!-- the DIV that will contain the widget -->
 	 <div class="weatherWidget" ></div><script>
@@ -21,7 +21,7 @@
 		window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
 		window.weatherWidgetConfig.push({
 			selector:".weatherWidget",
-			apiKey: VisualCrossingAPI, //Enter your API key here;
+			apiKey: "S87LX283YDV7XGQAP34PUYG7S", //Enter your API key here;
 			location:"Coppell, TX", //Enter an address
 			unitGroup:"us", //"us" or "metric"
 			forecastDays:7, //how many days forecast to show
