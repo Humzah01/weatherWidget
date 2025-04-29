@@ -7,6 +7,30 @@
 	<title>WeatherWidget | Humzah Ahmed </title>
 </head>
 <body>
-	
+
+	<!-- the DIV that will contain the widget -->
+	 <div class="weatherWidget" ></div><script>
+
+		window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+		window.weatherWidgetConfig.push({
+			selector:".weatherWidget",
+			apiKey:"ENTER YOUR API KEY HERE", 
+			location:"Chicago, IL", //Enter an address
+			unitGroup:"us", //"us" or "metric"
+			forecastDays:5, //how many days forecast to show
+			title:"Chicago 5 Day Forecast", //optional title 
+			showTitle:true, 
+			showConditions:true
+		});
+
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+
+</script>
+
 </body>
 </html>
