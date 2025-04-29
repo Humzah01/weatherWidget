@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="weatherWidgetLogo.png" type="image/x-icon">
+	<title>WeatherWidget|Humzah Ahmed</title>
+</head>
+<body>
+	<h1>Weather Widget</h1>
+	<p>Weather widget using Visual Crossing API</p>
+	<p>Location: <a href="https://www.visualcrossing.com/weather-api">Coppell, TX</a></p>
+	<p>Unit Group: <a href="https://www.visualcrossing.com/weather-api">US</a></p>
+
+
+
+	<!-- the DIV that will contain the widget -->
+	 <div class="weatherWidget" ></div><script>
+
+		window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+		window.weatherWidgetConfig.push({
+			selector:".weatherWidget",
+			apiKey: "S87LX283YDV7XGQAP34PUYG7S", //Enter your API key here;
+			location:"Coppell, TX", //Enter an address
+			unitGroup:"us", //"us" or "metric"
+			forecastDays:7, //how many days forecast to show
+			title:"Coppell 5 Day Forecast", //optional title 
+			showTitle:true, 
+			showConditions:true
+		});
+
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+
+</script>
+
+</body>
+</html>
