@@ -7,6 +7,7 @@
 	<title>WeatherWidget | Humzah Ahmed </title>
 </head>
 <body>
+	VisualCrossingAPI = ${{ secrets.SECRET_NAME }};
 
 	<!-- the DIV that will contain the widget -->
 	 <div class="weatherWidget" ></div><script>
@@ -14,11 +15,11 @@
 		window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
 		window.weatherWidgetConfig.push({
 			selector:".weatherWidget",
-			apiKey:"ENTER YOUR API KEY HERE", 
-			location:"Chicago, IL", //Enter an address
+			apiKey:VisualCrossingAPI, //Enter your API key here;
+			location:"Coppell, TX", //Enter an address
 			unitGroup:"us", //"us" or "metric"
-			forecastDays:5, //how many days forecast to show
-			title:"Chicago 5 Day Forecast", //optional title 
+			forecastDays:7, //how many days forecast to show
+			title:"Coppell 5 Day Forecast", //optional title 
 			showTitle:true, 
 			showConditions:true
 		});
